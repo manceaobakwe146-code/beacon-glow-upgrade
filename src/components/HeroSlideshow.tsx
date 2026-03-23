@@ -6,7 +6,12 @@ import slideCity from "@/assets/slide-city.jpg";
 import slideDigital from "@/assets/slide-digital.jpg";
 
 const slides = [
-  { image: bocraLogoSlide, title: "", subtitle: "", isLogo: true, logoImage: true },
+  {
+    image: bocraLogoSlide,
+    title: "Welcome to",
+    highlight: "BOCRA",
+    subtitle: "Botswana Communications Regulatory Authority — promoting fair, efficient and reliable communications services.",
+  },
   {
     image: slideTelecom,
     title: "Regulating for a",
@@ -58,49 +63,43 @@ const HeroSlideshow = () => {
           <img
             src={slide.image}
             alt={slide.title || "BOCRA"}
-            className={`w-full h-full ${
-              (slide as any).logoImage
-                ? "object-contain bg-primary p-6 xs:p-8 sm:p-12 md:p-16 lg:p-20"
-                : "object-cover"
-            }`}
+            className="w-full h-full object-cover"
             width={1920}
             height={1080}
           />
-          {!slide.isLogo && <div className="absolute inset-0 gradient-overlay" />}
-          {!slide.isLogo && (
-            <div className="absolute inset-0 flex items-center">
-              <div className="container mx-auto px-6 md:px-8 lg:px-12">
-                <div className="max-w-2xl slide-content" key={`content-${current}`}>
-                  <div className="flex items-center gap-3 mb-5">
-                    <div className="w-8 h-[2px] bg-accent rounded-full" />
-                    <span className="text-accent/90 text-xs font-semibold tracking-[0.2em] uppercase">BOCRA</span>
-                  </div>
-                  <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-heading font-bold text-primary-foreground leading-[1.1] tracking-tight">
-                    {slide.title}
-                    <br />
-                    <span className="text-secondary">{slide.highlight}</span>
-                  </h1>
-                  <p className="mt-3 sm:mt-5 text-xs sm:text-sm md:text-base lg:text-lg text-primary-foreground/60 max-w-md font-light leading-relaxed">
-                    {slide.subtitle}
-                  </p>
-                  <div className="mt-8 flex flex-wrap gap-3">
-                    <a
-                      href="#services"
-                      className="px-7 py-3 bg-accent text-accent-foreground font-semibold rounded-full text-sm hover:shadow-xl hover:shadow-accent/20 hover:scale-[1.02] transition-all duration-300"
-                    >
-                      Explore Services
-                    </a>
-                    <a
-                      href="#about"
-                      className="px-7 py-3 border border-primary-foreground/20 text-primary-foreground/90 font-medium rounded-full text-sm hover:bg-primary-foreground/10 transition-all duration-300"
-                    >
-                      Learn More
-                    </a>
-                  </div>
+          <div className="absolute inset-0 gradient-overlay" />
+          <div className="absolute inset-0 flex items-center">
+            <div className="container mx-auto px-6 md:px-8 lg:px-12">
+              <div className="max-w-2xl slide-content" key={`content-${current}`}>
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-8 h-[2px] bg-accent rounded-full" />
+                  <span className="text-accent/90 text-xs font-semibold tracking-[0.2em] uppercase">BOCRA</span>
+                </div>
+                <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-heading font-bold text-primary-foreground leading-[1.1] tracking-tight">
+                  {slide.title}
+                  <br />
+                  <span className="text-secondary">{slide.highlight}</span>
+                </h1>
+                <p className="mt-3 sm:mt-5 text-xs sm:text-sm md:text-base lg:text-lg text-primary-foreground/60 max-w-md font-light leading-relaxed">
+                  {slide.subtitle}
+                </p>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <a
+                    href="#services"
+                    className="px-7 py-3 bg-accent text-accent-foreground font-semibold rounded-full text-sm hover:shadow-xl hover:shadow-accent/20 hover:scale-[1.02] transition-all duration-300"
+                  >
+                    Explore Services
+                  </a>
+                  <a
+                    href="#about"
+                    className="px-7 py-3 border border-primary-foreground/20 text-primary-foreground/90 font-medium rounded-full text-sm hover:bg-primary-foreground/10 transition-all duration-300"
+                  >
+                    Learn More
+                  </a>
                 </div>
               </div>
             </div>
-          )}
+          </div>
         </div>
       ))}
 

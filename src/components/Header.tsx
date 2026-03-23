@@ -72,9 +72,10 @@ const Header = () => {
         <div className="flex items-center gap-2">
           <button
             onClick={() => setSearchOpen(true)}
-            className="w-9 h-9 flex items-center justify-center rounded-full text-primary-foreground/60 hover:text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-primary-foreground/60 hover:text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300"
           >
             <Search className="w-[18px] h-[18px]" />
+            <span className="hidden sm:inline text-[13px] font-medium">Search</span>
           </button>
           <a
             href="#contact"
