@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Search } from "lucide-react";
 import bocraLogo from "@/assets/bocra-logo.png";
+import SearchDialog from "@/components/SearchDialog";
 
 const navLinks = [
   { label: "Home", href: "#" },
@@ -17,6 +18,7 @@ const navLinks = [
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -68,7 +70,10 @@ const Header = () => {
 
         {/* Right actions */}
         <div className="flex items-center gap-2">
-          <button className="w-9 h-9 flex items-center justify-center rounded-full text-primary-foreground/60 hover:text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300">
+          <button
+            onClick={() => setSearchOpen(true)}
+            className="w-9 h-9 flex items-center justify-center rounded-full text-primary-foreground/60 hover:text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300"
+          >
             <Search className="w-[18px] h-[18px]" />
           </button>
           <a
@@ -112,6 +117,7 @@ const Header = () => {
           </a>
         </nav>
       </div>
+      <SearchDialog open={searchOpen} onOpenChange={setSearchOpen} />
     </header>
   );
 };

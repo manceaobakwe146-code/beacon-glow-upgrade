@@ -6,7 +6,7 @@ import slideCity from "@/assets/slide-city.jpg";
 import slideDigital from "@/assets/slide-digital.jpg";
 
 const slides = [
-  { image: bocraLogoSlide, title: "", subtitle: "", isLogo: true },
+  { image: bocraLogoSlide, title: "", subtitle: "", isLogo: true, logoImage: true },
   {
     image: slideTelecom,
     title: "Regulating for a",
@@ -47,7 +47,7 @@ const HeroSlideshow = () => {
   }, [next]);
 
   return (
-    <section className="relative w-full h-[100svh] min-h-[500px] max-h-[920px] overflow-hidden">
+    <section className="relative w-full h-[60svh] xs:h-[70svh] sm:h-[80svh] md:h-[90svh] lg:h-[100svh] min-h-[400px] max-h-[920px] overflow-hidden">
       {slides.map((slide, i) => (
         <div
           key={i}
@@ -58,7 +58,11 @@ const HeroSlideshow = () => {
           <img
             src={slide.image}
             alt={slide.title || "BOCRA"}
-            className="w-full h-full object-cover"
+            className={`w-full h-full ${
+              (slide as any).logoImage
+                ? "object-contain bg-primary p-6 xs:p-8 sm:p-12 md:p-16 lg:p-20"
+                : "object-cover"
+            }`}
             width={1920}
             height={1080}
           />
@@ -71,12 +75,12 @@ const HeroSlideshow = () => {
                     <div className="w-8 h-[2px] bg-accent rounded-full" />
                     <span className="text-accent/90 text-xs font-semibold tracking-[0.2em] uppercase">BOCRA</span>
                   </div>
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-heading font-bold text-primary-foreground leading-[1.1] tracking-tight">
+                  <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-heading font-bold text-primary-foreground leading-[1.1] tracking-tight">
                     {slide.title}
                     <br />
                     <span className="text-secondary">{slide.highlight}</span>
                   </h1>
-                  <p className="mt-5 text-sm sm:text-base md:text-lg text-primary-foreground/60 max-w-md font-light leading-relaxed">
+                  <p className="mt-3 sm:mt-5 text-xs sm:text-sm md:text-base lg:text-lg text-primary-foreground/60 max-w-md font-light leading-relaxed">
                     {slide.subtitle}
                   </p>
                   <div className="mt-8 flex flex-wrap gap-3">
