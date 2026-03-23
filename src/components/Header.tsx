@@ -112,7 +112,7 @@ const Header = () => {
           </a>
         </nav>
       </div>
-      <SearchDialog open={searchOpen} onOpenChange={setSearchOpen} />
+      
     </header>
   );
 };
