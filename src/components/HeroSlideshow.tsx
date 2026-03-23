@@ -47,7 +47,7 @@ const HeroSlideshow = () => {
   }, [next]);
 
   return (
-    <section className="relative w-full h-[100svh] min-h-[500px] max-h-[920px] overflow-hidden">
+    <section className="relative w-full h-[60svh] xs:h-[70svh] sm:h-[80svh] md:h-[90svh] lg:h-[100svh] min-h-[400px] max-h-[920px] overflow-hidden">
       {slides.map((slide, i) => (
         <div
           key={i}
