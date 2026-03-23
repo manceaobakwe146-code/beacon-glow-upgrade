@@ -6,7 +6,7 @@ import slideCity from "@/assets/slide-city.jpg";
 import slideDigital from "@/assets/slide-digital.jpg";
 
 const slides = [
-  { image: bocraLogoSlide, title: "", subtitle: "", isLogo: true },
+  { image: bocraLogoSlide, title: "", subtitle: "", isLogo: true, logoImage: true },
   {
     image: slideTelecom,
     title: "Regulating for a",
