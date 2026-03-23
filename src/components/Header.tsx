@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Search } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import bocraLogo from "@/assets/bocra-logo.png";
-import SearchDialog from "@/components/SearchDialog";
+import InlineSearch from "@/components/InlineSearch";
 
 const navLinks = [
   { label: "Home", href: "#" },
