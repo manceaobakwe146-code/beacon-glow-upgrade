@@ -80,7 +80,7 @@ const HeroSlideshow = () => {
                     <br />
                     <span className="text-secondary">{slide.highlight}</span>
                   </h1>
-                  <p className="mt-5 text-sm sm:text-base md:text-lg text-primary-foreground/60 max-w-md font-light leading-relaxed">
+                  <p className="mt-3 sm:mt-5 text-xs sm:text-sm md:text-base lg:text-lg text-primary-foreground/60 max-w-md font-light leading-relaxed">
                     {slide.subtitle}
                   </p>
                   <div className="mt-8 flex flex-wrap gap-3">
