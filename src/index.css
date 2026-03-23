@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,45 +6,45 @@
 
 @layer base {
   :root {
-    --background: 180 10% 97%;
-    --foreground: 192 100% 10%;
+    --background: 180 8% 98%;
+    --foreground: 192 40% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 192 100% 10%;
+    --card-foreground: 192 40% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 192 100% 10%;
+    --popover-foreground: 192 40% 12%;
 
     --primary: 186 100% 14%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 168 52% 72%;
-    --secondary-foreground: 192 100% 10%;
+    --secondary: 168 42% 78%;
+    --secondary-foreground: 192 40% 12%;
 
-    --muted: 180 10% 93%;
-    --muted-foreground: 192 20% 40%;
+    --muted: 180 6% 95%;
+    --muted-foreground: 192 12% 50%;
 
-    --accent: 50 92% 49%;
-    --accent-foreground: 192 100% 10%;
+    --accent: 46 90% 52%;
+    --accent-foreground: 192 40% 12%;
 
     --destructive: 340 65% 47%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 180 10% 88%;
-    --input: 180 10% 88%;
+    --border: 180 8% 90%;
+    --input: 180 8% 90%;
     --ring: 186 100% 14%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    /* BOCRA brand colors */
+    /* BOCRA brand */
     --bocra-teal: 186 100% 14%;
-    --bocra-dark: 192 100% 8%;
-    --bocra-mint: 168 52% 72%;
-    --bocra-blue: 216 64% 39%;
+    --bocra-dark: 192 80% 6%;
+    --bocra-mint: 168 42% 78%;
+    --bocra-blue: 216 64% 42%;
     --bocra-cyan: 193 100% 43%;
-    --bocra-yellow: 50 92% 49%;
-    --bocra-green: 145 54% 40%;
-    --bocra-pink: 340 65% 47%;
+    --bocra-yellow: 46 90% 52%;
+    --bocra-green: 152 48% 42%;
+    --bocra-pink: 340 58% 50%;
 
     --sidebar-background: 186 100% 14%;
     --sidebar-foreground: 0 0% 98%;
@@ -61,36 +61,68 @@
   * {
     @apply border-border;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
-    @apply bg-background text-foreground;
-    font-family: 'Open Sans', sans-serif;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.01em;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.02em;
   }
 }
 
-/* Slideshow animations */
-@keyframes slideIn {
-  from { opacity: 0; transform: scale(1.05); }
-  to { opacity: 1; transform: scale(1); }
-}
-
+/* Sleek animations */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
+  from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.animate-slide-in {
-  animation: slideIn 1s ease-out;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 .animate-fade-up {
-  animation: fadeUp 0.8s ease-out forwards;
+  animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Slide content */
 .slide-content {
-  animation: fadeUp 0.8s ease-out 0.3s forwards;
+  animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
   opacity: 0;
+}
+
+/* Glass effect utility */
+.glass {
+  background: rgba(0, 48, 56, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Sleek card hover */
+.sleek-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.sleek-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(0, 48, 56, 0.12);
+}
+
+/* Subtle gradient overlay */
+.gradient-overlay {
+  background: linear-gradient(135deg, rgba(0, 48, 56, 0.75) 0%, rgba(0, 48, 56, 0.4) 100%);
 }
