@@ -70,7 +70,10 @@ const Header = () => {
 
         {/* Right actions */}
         <div className="flex items-center gap-2">
-          <button className="w-9 h-9 flex items-center justify-center rounded-full text-primary-foreground/60 hover:text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300">
+          <button
+            onClick={() => setSearchOpen(true)}
+            className="w-9 h-9 flex items-center justify-center rounded-full text-primary-foreground/60 hover:text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300"
+          >
             <Search className="w-[18px] h-[18px]" />
           </button>
           <a
