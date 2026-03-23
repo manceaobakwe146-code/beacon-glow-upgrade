@@ -6,7 +6,12 @@ import slideCity from "@/assets/slide-city.jpg";
 import slideDigital from "@/assets/slide-digital.jpg";
 
 const slides = [
-  { image: bocraLogoSlide, title: "", subtitle: "", isLogo: true, logoImage: true },
+  {
+    image: bocraLogoSlide,
+    title: "Welcome to",
+    highlight: "BOCRA",
+    subtitle: "Botswana Communications Regulatory Authority — promoting fair, efficient and reliable communications services.",
+  },
   {
     image: slideTelecom,
     title: "Regulating for a",
