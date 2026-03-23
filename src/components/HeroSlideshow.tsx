@@ -58,7 +58,11 @@ const HeroSlideshow = () => {
           <img
             src={slide.image}
             alt={slide.title || "BOCRA"}
-            className="w-full h-full object-cover"
+            className={`w-full h-full ${
+              (slide as any).logoImage
+                ? "object-contain bg-primary p-6 xs:p-8 sm:p-12 md:p-16 lg:p-20"
+                : "object-cover"
+            }`}
             width={1920}
             height={1080}
           />
