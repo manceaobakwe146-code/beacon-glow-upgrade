@@ -75,7 +75,7 @@ const HeroSlideshow = () => {
                     <div className="w-8 h-[2px] bg-accent rounded-full" />
                     <span className="text-accent/90 text-xs font-semibold tracking-[0.2em] uppercase">BOCRA</span>
                   </div>
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-heading font-bold text-primary-foreground leading-[1.1] tracking-tight">
+                  <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-heading font-bold text-primary-foreground leading-[1.1] tracking-tight">
                     {slide.title}
                     <br />
                     <span className="text-secondary">{slide.highlight}</span>
