@@ -106,7 +106,8 @@ const Header = () => {
           ))}
           <a
             href="#contact"
-            className="mt-3 inline-flex px-3.5 py-1.5 text-[11px] font-semibold bg-accent text-accent-foreground rounded-full"
+            onClick={() => setMobileOpen(false)}
+            className="mt-4 mb-2 inline-flex px-5 py-2.5 text-sm font-semibold bg-accent text-accent-foreground rounded-full shadow-md shadow-accent/20"
           >
             Get in Touch
           </a>
