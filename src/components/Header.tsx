@@ -73,7 +73,7 @@ const Header = () => {
           <InlineSearch />
           <a
             href="#contact"
-            className="hidden md:inline-flex px-5 py-2 text-[13px] font-semibold bg-accent text-accent-foreground rounded-full hover:shadow-lg hover:shadow-accent/20 hover:scale-[1.02] transition-all duration-300"
+            className="hidden md:inline-flex px-3.5 py-1.5 text-[11px] font-semibold bg-accent text-accent-foreground rounded-full hover:shadow-lg hover:shadow-accent/20 hover:scale-[1.02] transition-all duration-300"
           >
             Get in Touch
           </a>
@@ -106,7 +106,7 @@ const Header = () => {
           ))}
           <a
             href="#contact"
-            className="mt-3 inline-flex px-5 py-2 text-[13px] font-semibold bg-accent text-accent-foreground rounded-full"
+            className="mt-3 inline-flex px-3.5 py-1.5 text-[11px] font-semibold bg-accent text-accent-foreground rounded-full"
           >
             Get in Touch
           </a>
