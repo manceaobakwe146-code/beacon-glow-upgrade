@@ -106,7 +106,7 @@ const Header = () => {
           ))}
           <a
             href="#contact"
-            className="mt-3 inline-flex px-5 py-2 text-[13px] font-semibold bg-accent text-accent-foreground rounded-full"
+            className="mt-3 inline-flex px-3.5 py-1.5 text-[11px] font-semibold bg-accent text-accent-foreground rounded-full"
           >
             Get in Touch
           </a>
